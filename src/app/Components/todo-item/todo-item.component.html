@@ -1,0 +1,15 @@
+<!-- <div class="my-3">
+  <h3>{{ todo.title }}</h3>
+  <p>{{ todo.description }}</p>
+  <button class="btn btn-danger" (click)="onDelete(todo)">Delete</button>
+</div> -->
+<app-add-todo></app-add-todo>
+<h4>Your Todos</h4>
+<div class="card my-3">
+  <div class="card-header">Todo {{todo.sno}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{ todo.title }}</h5>
+    <p class="card-text">{{ todo.description }}</p>
+    <button class="btn btn-danger" (click)="onDelete(todo)">Delete</button>
+  </div>
+</div>
