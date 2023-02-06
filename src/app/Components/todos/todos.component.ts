@@ -37,4 +37,9 @@ export class TodosComponent {
     const index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
   }
+
+  addATodo(todo: Todo){
+    console.log(todo, "<<==todo...")
+    this.todos.push(todo)
+  }
 }
