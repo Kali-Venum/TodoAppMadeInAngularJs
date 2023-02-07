@@ -6,10 +6,20 @@
 <!-- <app-add-todo></app-add-todo> -->
 
 <div class="card my-3">
-  <div class="card-header">Todo {{todo.sno}}</div>
+  <div class="card-header">Todo {{ todo.sno }}</div>
   <div class="card-body">
-    <h5 class="card-title">{{ todo.title }}</h5>
+    <h5 [ngClass]="{ strike: !todo.isActive }">{{ todo.title }}</h5>
     <p class="card-text">{{ todo.description }}</p>
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        (click)="checkBoxHandler(todo)"
+        [checked]="!todo.isActive"
+      />
+      <label class="form-check-label" for="exampleCheck1">Done</label>
+    </div>
     <button class="btn btn-danger" (click)="onDelete(todo)">Delete</button>
   </div>
 </div>

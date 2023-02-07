@@ -9,6 +9,7 @@
     <app-todo-item
       [todo]="todo"
       (todoDelete)="deleteTodo($event)"
+      (todoCheck)="toggleTodo($event)"
     ></app-todo-item>
   </div>
 </ng-template>
