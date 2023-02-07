@@ -7,7 +7,7 @@ import { Todo } from 'src/app/Models/Todo';
   styleUrls: ['./add-todo.component.css'],
 })
 export class AddTodoComponent {
-  @Output() addATodo: EventEmitter<Todo> = new EventEmitter();
+  @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
 
   title: string;
   description: string;
@@ -19,6 +19,6 @@ export class AddTodoComponent {
       description: this.description,
       isActive: true,
     };
-    this.addATodo.emit(todo)
+    this.todoAdd.emit(todo)
   }
 }
